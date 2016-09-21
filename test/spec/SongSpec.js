@@ -15,17 +15,17 @@ describe('SongModel', function() {
     expect(model.trigger).to.have.been.calledWith('play', model);
   });
 
-  xit('has an enqueue method that triggers an "enqueue" event', function() {
+  it('has an enqueue method that triggers an "enqueue" event', function() {
     model.enqueue();
     expect(model.trigger).to.have.been.calledWith('enqueue', model);
   });
 
-  xit('has a dequeue method that triggers a "dequeue" event', function() {
+  it('has a dequeue method that triggers a "dequeue" event', function() {
     model.dequeue();
     expect(model.trigger).to.have.been.calledWith('dequeue', model);
   });
 
-  xit('has an ended method that triggers an "ended" event', function() {
+  it('has an ended method that triggers an "ended" event', function() {
     model.play();
     model.ended();
     expect(model.trigger).to.have.been.calledWith('ended', model);

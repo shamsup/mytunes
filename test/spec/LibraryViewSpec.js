@@ -31,7 +31,7 @@ describe('LibraryView', function() {
     expect(view.$el.children().length).to.equal(2);
     expect(view.$el.children()[0].tagName).to.equal('TH');
   });
-  
+
   xdescribe('when fetching song data from Parse', function() {
     var fakeResponse, requests, xhr;
 
