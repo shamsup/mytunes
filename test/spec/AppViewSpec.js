@@ -14,7 +14,8 @@ describe('AppView', function() {
           title: 'Sizzle Sundays',
           url: 'fake/url'
         }
-      ])
+      ]),
+      queue: new SongQueue([])
     });
     appView = new AppView({model: app});
   });

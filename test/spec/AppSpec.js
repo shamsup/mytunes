@@ -14,7 +14,7 @@ describe('App', function() {
         title: 'test song 2'
       }
     ]);
-    app = new AppModel({library: fakeSongs});
+    app = new AppModel({library: fakeSongs, queue: new SongQueue([])});
   });
 
   it('creates a song queue on initialize', function() {

@@ -22,7 +22,7 @@ describe('PlayerView', function() {
     ]);
     // playerView is created in AppView initialize
     // access with appView.playerView
-    appView = new AppView({model: new AppModel({library: library})});
+    appView = new AppView({model: new AppModel({library: library, queue: new SongQueue([])})});
   });
 
   it('gets its model property set to any song that is played', function() {
