@@ -11,7 +11,10 @@ var Songs = Backbone.Collection.extend({
     .then(results => this.add(results.map(song => (console.log(song), {
       url: song.url,
       title: song.title,
-      artist: song.artist
+      artist: song.artist,
+      album: song.album,
+      artwork: song.artwork_url,
+      objectId: song.objectId
     })))).then(() => this.trigger('update'));
   }
 
