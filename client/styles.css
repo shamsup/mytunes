@@ -1,10 +1,33 @@
-body{
+body {
   margin: 0;
-  padding: 0;
+  padding: 0 0 120px;
   background-size: cover;
 }
 .container {
   max-width: 1000px;
   margin: 0 auto;
   background: rgba(255,255,255,.77);
+}
+
+.player {
+  height:120px;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background: #fff;
+}
+.player audio{
+  width:100%
+}
+.song-info {
+  height: 88px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+.title {
+  display: block;
+  font-size: 1.5em;
 }
