@@ -28,10 +28,12 @@ var AppModel = Backbone.Model.extend({
 
     songQueue.on('ended', function(song) {
       song.dequeue();
-      if (songQueue.length) {
-        songQueue.playFirst();
-      } else {
-        this.set('currentSong', new SongModel());
+      if (song === this.get('currentSong')) {
+        if (songQueue.length) {
+          songQueue.playFirst();
+        } else {
+          this.set('currentSong', null);
+        }
       }
       // this.set('currentSong', songQueue.at(0));
     }, this);
