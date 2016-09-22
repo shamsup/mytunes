@@ -11,12 +11,6 @@ var SongQueue = Backbone.Collection.extend({
     });
   },
 
-  nextSong: function(song) {
-    console.log('SongQueue: next song');
-    this.shift();
-    //return this.at(0) || new SongModel();
-  },
-
   playFirst: function() {
     this.at(0).play();
   }

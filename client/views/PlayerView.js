@@ -17,6 +17,7 @@ var PlayerView = Backbone.View.extend({
   },
 
   render: function() {
+    this.el.currentTime = 0;
     return this.$el.attr('src', this.model ? this.model.get('url') : '');
   }
 
