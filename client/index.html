@@ -7,7 +7,7 @@
     <script src="bower_components/underscore/underscore.js"></script>
     <script src="bower_components/backbone/backbone.js"></script>
 
-    <script src="data/data.js"></script>
+    <script src="env/config.js"></script>
 
     <script src="models/SongModel.js"></script>
     <script src="collections/Songs.js"></script>
@@ -22,11 +22,12 @@
     <script src="views/AppView.js"></script>
 
     <script>
+    var app;
       $(function() {
         // set up model objects
-        var library = new Songs(songData);
+        var library = new Songs();
         var queue = new SongQueue([]);
-        var app = new AppModel({library: library, queue: queue});
+        app = new AppModel({library: library, queue: queue});
 
         // build a view for the top level of the whole app
         var appView = new AppView({model: app});
